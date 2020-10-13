@@ -1,3 +1,11 @@
-(executables
- (names test)
- (libraries ounit2 osql.lib))
+(executable
+ (name run_tests)
+ (libraries
+  alcotest
+  test_parser
+))
+
+(alias
+ (name runtest)
+ (deps run_tests.exe)
+ (action (run %{deps} -q --color=always)))

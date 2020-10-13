@@ -1,6 +1,5 @@
 %{
   open Sql
-  open Sql.Type
 %}
 
 
@@ -41,7 +40,7 @@ stream_definition: s=sequence(column_def) { s }
 column_def: name=IDENT t=sql_type { make_attribute name t }
 
 sql_type: 
-               | T_STRING { Text }
+               | T_STRING { String }
                | T_INTEGER { Int }
                | T_FLOAT { Float }
                | T_BOOLEAN { Bool }

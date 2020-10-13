@@ -2,7 +2,6 @@
   open Printf
   open Lexing
   open Sql_parser
-  module T = Sql.Type
 
 let error _ caller_id =
   prerr_endline (sprintf "Lexer error : %s" caller_id);

@@ -1,0 +1,7 @@
+(library
+  (name test_parser)
+  (libraries
+    alcotest
+    osql.parser
+    )
+  )

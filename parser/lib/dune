@@ -1,6 +1,6 @@
 (library
-  (name osql)
-  (public_name osql.lib)
+  (name parser)
+  (public_name osql.parser)
   (preprocess (pps ppx_deriving.std))
 )
 

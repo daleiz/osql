@@ -19,10 +19,14 @@ depends: [
   "ocamlformat" {dev}
   "merlin" {dev}
   "ppx_deriving"
-  "ounit2" 
+  "alcotest" 
   "odoc" {with-doc}
 
 ]
+
 build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
+
+run-test: ["dune" "runtest" "-p" name]
+
