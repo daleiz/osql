@@ -1,0 +1,10 @@
+(library
+  (name osql)
+  (public_name osql.lib)
+  (preprocess (pps ppx_deriving.std))
+)
+
+(menhir (modules sql_parser))
+(ocamllex sql_lexer)
+
+

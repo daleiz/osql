@@ -1,0 +1,28 @@
+opam-version: "2.0"
+name: "osql"
+version: "0.1"
+synopsis: "Streaming database demo using OCaml"
+description: """
+demo
+"""
+maintainer: "wangbin@emqx.io"
+authors: "Wang Bin"
+license: "MIT"
+homepage: "https://github.com/daleiz/osql"
+bug-reports: "https://github.com/daleiz/osql/issues"
+dev-repo: "git://github.com/daleiz/osql.git"
+depends: [
+  "dune" {build}
+  "opam-lock" {dev}
+  "utop" {dev}
+  "ocp-indent" {dev}
+  "ocamlformat" {dev}
+  "merlin" {dev}
+  "ppx_deriving"
+  "ounit2" 
+  "odoc" {with-doc}
+
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
